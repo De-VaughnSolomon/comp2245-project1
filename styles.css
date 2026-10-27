@@ -1,2 +1,146 @@
 /* Project 1: write all of your styles in this file.
    Follow the layout, font and colour guide in the project brief. */
+
+/* Pagetext */
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #1A202C;
+}
+
+/* Headings and logo */
+h1, h2, h3, .logo{
+   font-family: "Fraunces", Georgia, serif;
+   color: #22543D;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links a {
+    color: #2D3748;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2F855A;
+}
+
+/* Buttons */
+.btn {
+    background-color: #2F855A;
+    color: #FFFFFF;
+}
+
+.btn:hover {
+    background-color: #276749;
+}
+
+/* Hero and Visit sections */
+.hero,.visit {
+    background-color: #F0FFF4;
+}
+
+/* Feature cards */
+.feature {
+    background-color: #F7FAFC;
+}
+
+/* Table */
+thead {
+    background-color: #2F855A;
+    color: #FFFFFF;
+}
+
+th,td {
+    border-bottom-color: #C6F6D5;
+}
+
+/* Quotation */
+.testimonial {
+    border-left-color: #2F855A;
+}
+
+.testimonial .name {
+    color: #4A5568;
+    font-size: 16px;
+}
+
+/* Header line */
+.site-header {
+    border-bottom-color: #E2E8F0;
+}
+
+/* Form fields */
+input,select {
+    border-color: #A0AEC0;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"] {
+    border-color: #C53030;
+}
+
+/* Error messages */
+.error {
+    color: #C53030;
+    font-size: 15px;
+}
+
+/* Success message */
+#form-message.success {
+    background-color: #C6F6D5;
+    color: #22543D;
+}
+
+/* Footer */
+footer {
+    background-color: #22543D;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+
+/* Responsive layout*/
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    section {
+        padding: 48px 0;
+    }
+
+    .site-header .container,
+    footer .container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero .container,
+    .feature-list,
+    .visit .container {
+        grid-template-columns: 1fr;
+    }
+}
