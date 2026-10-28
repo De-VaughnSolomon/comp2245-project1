@@ -1,19 +1,42 @@
 /* Project 1: write all of your styles in this file.
    Follow the layout, font and colour guide in the project brief. */
 
-/* Pagetext */
+
+/* 1. The whole page */
+* {
+    box-sizing: border-box;
+}
 
 body {
+    margin: 0;
     font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     line-height: 1.6;
     color: #1A202C;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+section {
+    padding: 80px 0;
+}
+
 /* Headings and logo */
-h1, h2, h3, .logo{
-   font-family: "Fraunces", Georgia, serif;
-   color: #22543D;
+h1,
+h2,
+h3,
+.logo {
+    font-family: "Fraunces", Georgia, serif;
+    color: #22543D;
 }
 
 h1 {
@@ -22,6 +45,8 @@ h1 {
 
 h2 {
     font-size: 36px;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
 h3 {
@@ -33,7 +58,57 @@ h3 {
     font-weight: bold;
 }
 
-/* Navigation links */
+/* 2. Buttons */
+.btn {
+    display: inline-block;
+    background-color: #2F855A;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #276749;
+}
+
+a.btn {
+    display: inline-block;
+}
+
+/* 3. Header */
+.site-header {
+    border-bottom: 1px solid #E2E8F0;
+    padding: 16px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo,
+.nav-links a {
+    text-decoration: none;
+}
+
+.logo:hover,
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
 .nav-links a {
     color: #2D3748;
     font-weight: bold;
@@ -43,82 +118,160 @@ h3 {
     color: #2F855A;
 }
 
-/* Buttons */
-.btn {
-    background-color: #2F855A;
-    color: #FFFFFF;
-}
-
-.btn:hover {
-    background-color: #276749;
-}
-
-/* Hero and Visit sections */
-.hero,.visit {
+/* 4. Hero */
+.hero {
     background-color: #F0FFF4;
 }
 
-/* Feature cards */
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+}
+
+/* 5. Why shop with us */
+.feature-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
 .feature {
+    padding: 32px;
+    border-radius: 12px;
     background-color: #F7FAFC;
 }
 
+/* 6. Visit the market */
+.visit {
+    background-color: #F0FFF4;
+}
+
+.visit .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
 /* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption,
+th,
+td {
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #C6F6D5;
+}
+
 thead {
     background-color: #2F855A;
     color: #FFFFFF;
 }
 
-th,td {
-    border-bottom-color: #C6F6D5;
-}
-
-/* Quotation */
+/* Testimonial */
 .testimonial {
-    border-left-color: #2F855A;
+    margin: 0;
+    padding: 32px;
+    background-color: #FFFFFF;
+    border-left: 6px solid #2F855A;
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    font-size: 1.1rem;
 }
 
 .testimonial .name {
     color: #4A5568;
     font-size: 16px;
+    font-style: normal;
 }
 
-/* Header line */
-.site-header {
-    border-bottom-color: #E2E8F0;
+/* 7. Join the mailing list */
+#mailing-list h2,
+#mailing-list > .container > p {
+    text-align: center;
 }
 
-/* Form fields */
-input,select {
-    border-color: #A0AEC0;
+#signup-form {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-input[aria-invalid="true"],
-select[aria-invalid="true"] {
-    border-color: #C53030;
+#signup-form label {
+    display: block;
+    margin-bottom: 8px;
 }
 
-/* Error messages */
+#signup-form input,
+#signup-form select {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #A0AEC0;
+    border-radius: 8px;
+    font: inherit;
+}
+
+#signup-form input[aria-invalid="true"],
+#signup-form select[aria-invalid="true"] {
+    border: 2px solid #C53030;
+}
+
 .error {
+    display: block;
+    min-height: 1.2em;
     color: #C53030;
     font-size: 15px;
 }
 
-/* Success message */
-#form-message.success {
-    background-color: #C6F6D5;
-    color: #22543D;
+#signup-form .btn {
+    width: 100%;
 }
 
-/* Footer */
+#form-message.success {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #C6F6D5;
+    color: #22543D;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* 8. Footer */
 footer {
     background-color: #22543D;
     color: #FFFFFF;
     font-size: 16px;
+    padding: 32px 0;
 }
 
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/* Responsive layout*/
+footer p {
+    margin: 0;
+}
+
+/* 9. Small screens */
 @media (max-width: 768px) {
     h1 {
         font-size: 40px;
